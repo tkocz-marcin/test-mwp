@@ -1,0 +1,16 @@
+$textColor: #eee;
+$barColor: #363D4D;
+$btnColor: #ffca49;
+$iconColor: #ddd;
+$inActiveBtnColor: #363D4D ;
+$activeBtnColor: #ffca49 ;
+
+
+@keyframes slideBottom {
+    from {bottom: -200px;}
+    to {bottom: 0;}
+} 
+@keyframes slideTop {
+    from {top: -200px;}
+    to {top: 0px;}
+} 

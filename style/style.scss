@@ -1,0 +1,131 @@
+@import "variables";
+
+* {
+	padding: 0;
+	margin: 0;
+	border: 0;
+	outline: 0;
+}
+
+html {
+	font-size: 62.5%;
+	font-family: Lato;
+}
+body {
+	background: #eee;
+	font-size: 1.6rem;
+}
+.bar {
+	background: $barColor;
+	padding: 0.7vh 1vw;
+	color: $textColor;
+	display: flex;
+	justify-content: space-between;
+	position: fixed;
+	left: 0;
+	right: 0;
+}
+.pos-top {
+	transition: margin .5s;
+	animation-name: slideTop;
+    animation-duration: .5s;
+}
+.pos-bottom {
+	animation-name: slideBottom;
+    animation-duration: .5s;
+    bottom: 0;
+}
+.btn {
+	transition: box-shadow .3s;
+	&:hover {
+		box-shadow: 0px 5px 10px -5px #111;
+	}
+}
+.btn-widget {
+	background: $btnColor;
+	border-radius: 3px;
+	padding: 0.7vh 20px;
+	color: $textColor;
+	font-weight: 600;
+	font-size: 1.6rem;
+	margin-left: 1vw;
+	line-height: 2rem;
+}
+.btn-widget, .fa {
+	cursor: pointer;
+}
+.fa {
+	margin-top: 0.7vh;
+	color: $iconColor;
+	font-size: 1.7rem;
+	line-height: 1.6rem;
+	height: 1.6rem;
+}
+.fa-info {
+	transition: color .3s;
+	&:hover {
+		color: #fff;
+	}
+}
+.exit {
+	width: 20px;
+	height: 20px;
+	position: relative;
+	transition: transform .2s;
+	&:after, &:before {
+		content: '';
+		width: 20px;
+		height: 2px;
+		position: absolute;
+		top: calc(50% - 1px);
+		left: 0;
+		background: $iconColor;
+	}
+	&:after {
+		transform: rotate(45deg);
+	}
+	&:before {
+		transform: rotate(-45deg);
+	}	
+	&:hover {
+		transform: rotate(180deg);
+		&:after, &:before {
+			background: #fff;
+		}
+	}
+}
+.nav-bar {
+	position: fixed;
+	padding: 1vh 1vw;
+	top: calc(50% - 35vh);
+	left: calc(50% - 25vw);
+	min-height: 40vh;
+	width: 50vw;
+	box-sizing: border-box;
+	background: #fff;
+	text-align: center;
+	box-shadow: 0px 5px 10px -5px #111;
+	h1 {
+		margin: 2vh 0;
+		font-size: 3rem;
+	}
+	.btn-pos {
+		padding: 1vh 1vw;
+		border-radius: 3px;
+		color: $textColor;
+		margin: 5vh 2vw;
+		min-width: 150px;
+		cursor: pointer;
+		font-weight: 600;
+		transition: box-shadow .3s;
+		&:hover {
+			box-shadow: 0px 5px 10px -5px #111;
+		}
+	}
+	.in-active {
+		background: $inActiveBtnColor;
+	}
+	.active {
+		background: $activeBtnColor;
+	}
+}
